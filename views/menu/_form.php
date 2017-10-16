@@ -25,6 +25,7 @@ use mdm\admin\AutocompleteAsset;
     <?= $form->field($model, 'order')->input('number') ?>
 
     <?= $form->field($model, 'data')->textarea(['rows' => 4]) ?>
+    <?= $form->field($model, 'icon')->textInput(['id' => 'icon']) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('rbac-admin', 'Create') : Yii::t('rbac-admin', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
