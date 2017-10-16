@@ -63,7 +63,8 @@ class Menu extends \yii\db\ActiveRecord
             [['order'], 'integer'],
             [['route'], 'in',
                 'range' => static::getSavedRoutes(),
-                'message' => 'Route "{value}" not found.']
+                'message' => 'Route "{value}" not found.'],
+            [['icon'], 'string', 'max' => 50]
         ];
     }
 
@@ -99,6 +100,7 @@ class Menu extends \yii\db\ActiveRecord
             'route' => Yii::t('rbac-admin', 'Route'),
             'order' => Yii::t('rbac-admin', 'Order'),
             'data' => Yii::t('rbac-admin', 'Data'),
+            'icon' => Yii::t('rbac-admin', 'icon'),
         ];
     }
 
