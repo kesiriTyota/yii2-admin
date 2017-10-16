@@ -204,6 +204,7 @@ class MenuHelper
                     $item = [
                         'label' => Yii::t('rbac-admin',$menu['name']),
                         'url' => static::parseRoute($menu['route']),
+                        'icon' => $menu['icon'],
                     ];
                     if ($menu['children'] != []) {
                         $item['items'] = $menu['children'];
