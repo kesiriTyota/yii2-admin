@@ -143,7 +143,7 @@ class Menu extends \yii\db\ActiveRecord
     {
         $tableName = static::tableName();
         return (new \yii\db\Query())
-                ->select(['m.id', 'm.name', 'm.route', 'parent_name' => 'p.name'])
+                ->select(['m.id', 'm.icon', 'm.name', 'm.route', 'parent_name' => 'p.name'])
                 ->from(['m' => $tableName])
                 ->leftJoin(['p' => $tableName], '[[m.parent]]=[[p.id]]')
                 ->all(static::getDb());
